@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>control</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="movement.html" />
+    <style>
+      h3 {
+        text-align: center;
+      }
+      .header {
+        padding: 10px;
+        text-align: center;
+        background: #04aa6d;
+        color: #d3d3d3;
+        font-size: 18px;
+      }
+      .header2 {
+        padding: 10px;
+        text-align: center;
+        background: #1a0a35;
+        color: #d3d3d3;
+        font-size: 18px;
+      }
+      .p1 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body class="color">
+    <div class="header">
+      <h1>Robot Arm Control</h1>
+    </div>
+    <div class="header2">
+      <h3>محرك 1</h3>
+      <div class="slidecontainer">
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="50"
+          class="slider"
+          id="myRange"
+        />
+        <p>Value: <span id="demo"></span></p>
+      </div>
+      <script>
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value;
+
+        slider.oninput = function () {
+          output.innerHTML = this.value;
+        };
+      </script>
+      <p class="p1">
+        ----------------------------------------------------------
+      </p>
+      <h3>محرك 2</h3>
+      <div class="slidecontainer">
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="50"
+          class="slider2"
+          id="myRange2"
+        />
+        <p>Value: <span id="demo2"></span></p>
+      </div>
+      <script>
+        var slider2 = document.getElementById("myRange2");
+        var output2 = document.getElementById("demo2");
+        output2.innerHTML = slider2.value;
+
+        slider2.oninput = function () {
+          output2.innerHTML = this.value;
+        };
+      </script>
+      <p class="p1">
+        ----------------------------------------------------------
+      </p>
+      <h3>محرك 3</h3>
+      <div class="slidecontainer">
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="50"
+          class="slider3"
+          id="myRange3"
+        />
+        <p>Value: <span id="demo3"></span></p>
+      </div>
+      <script>
+        var slider3 = document.getElementById("myRange3");
+        var output3 = document.getElementById("demo3");
+        output3.innerHTML = slider3.value;
+
+        slider3.oninput = function () {
+          output3.innerHTML = this.value;
+        };
+      </script>
+      <p class="p1">
+        ----------------------------------------------------------
+      </p>
+      <!-- Write your comments here -->
+      <h3>محرك 4</h3>
+      <div class="slidecontainer">
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="50"
+          class="slider4"
+          id="myRange4"
+        />
+        <p>Value: <span id="demo4"></span></p>
+      </div>
+      <script>
+        var slider4 = document.getElementById("myRange4");
+        var output4 = document.getElementById("demo4");
+        output4.innerHTML = slider4.value;
+
+        slider4.oninput = function () {
+          output4.innerHTML = this.value;
+        };
+      </script>
+      <p class="p1">
+        ----------------------------------------------------------
+      </p>
+      <h3>محرك 5</h3>
+      <div class="slidecontainer">
+        <input
+          type="range"
+          min="0"
+          max="100"
+          value="50"
+          class="slider5"
+          id="myRange5"
+        />
+        <p>Value: <span id="demo5"></span></p>
+      </div>
+      <script>
+        var slider5 = document.getElementById("myRange5");
+        var output5 = document.getElementById("demo5");
+        output5.innerHTML = slider5.value;
+
+        slider5.oninput = function () {
+          output5.innerHTML = this.value;
+        };
+      </script>
+      <p class="p1">
+        ----------------------------------------------------------
+      </p>
+      <button class="button button1">حفظ</button>
+      <button class="button button2">تشغيل</button>
+      <p class="p">Robot Movement:<a href="movement.html">click here</a></p>
+    </div>
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "9ab8d5d4-7878-4c10-8229-1d800f984b69", // The ID of this integration.
+        region: "eu-gb", // The region your integration is hosted in.
+        serviceInstanceID: "f03cd997-d060-443a-814e-bb1c02ccfc9e", // The ID of your service instance.
+        onLoad: function (instance) {
+          instance.render();
+        },
+      };
+      setTimeout(function () {
+        const t = document.createElement("script");
+        t.src =
+          "https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+        document.head.appendChild(t);
+      });
+    </script>
+  </body>
+</html>

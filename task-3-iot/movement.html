@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movement</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.html" />
+    <style>
+      .header {
+        padding: 10px;
+        text-align: center;
+        background: #04aa6d;
+        color: #d3d3d3;
+        font-size: 18px;
+      }
+      .p {
+        color: #d3d3d3;
+      }
+    </style>
+  </head>
+  <body class="color">
+    <div class="header">
+      <h1>Robot Movement</h1>
+    </div>
+    <div>
+      <button class="forword">Forword</button>
+    </div>
+    <div>
+      <button class="left">Left</button>
+    </div>
+    <div>
+      <button class="stop">Stop</button>
+    </div>
+    <div>
+      <button class="right">Right</button>
+    </div>
+    <div>
+      <button class="backword">backword</button>
+    </div>
+    <div>
+      <p class="p">Robot Arm Controler:<a href="index.html">click here</a></p>
+    </div>
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: "9ab8d5d4-7878-4c10-8229-1d800f984b69", // The ID of this integration.
+        region: "eu-gb", // The region your integration is hosted in.
+        serviceInstanceID: "f03cd997-d060-443a-814e-bb1c02ccfc9e", // The ID of your service instance.
+        onLoad: function (instance) {
+          instance.render();
+        },
+      };
+      setTimeout(function () {
+        const t = document.createElement("script");
+        t.src =
+          "https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+        document.head.appendChild(t);
+      });
+    </script>
+  </body>
+</html>
